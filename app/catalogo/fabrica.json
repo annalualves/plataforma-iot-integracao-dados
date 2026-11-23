@@ -1,0 +1,948 @@
+{
+  "fabrica": {
+    "id": "FAB-01",
+    "nome": "Fábrica Simulada - Contagem/MG"
+  },
+  "linhas": [
+    {
+      "id": "L1",
+      "nome": "Linha 1 - Usinagem",
+      "setor": "A"
+    },
+    {
+      "id": "L2",
+      "nome": "Linha 2 - Montagem",
+      "setor": "B"
+    }
+  ],
+  "maquinas": [
+    {
+      "id": "L1-M01",
+      "linha_id": "L1",
+      "tipo": "serra_fita",
+      "fabricante": "Romi",
+      "ano_fabricacao": 2017,
+      "posicao_na_linha": 1,
+      "alimenta": [
+        "L1-M02"
+      ]
+    },
+    {
+      "id": "L1-M02",
+      "linha_id": "L1",
+      "tipo": "torno_cnc",
+      "fabricante": "ABB",
+      "ano_fabricacao": 2021,
+      "posicao_na_linha": 2,
+      "alimenta": [
+        "L1-M03"
+      ]
+    },
+    {
+      "id": "L1-M03",
+      "linha_id": "L1",
+      "tipo": "fresadora_cnc",
+      "fabricante": "ABB",
+      "ano_fabricacao": 2019,
+      "posicao_na_linha": 3,
+      "alimenta": [
+        "L1-M04"
+      ]
+    },
+    {
+      "id": "L1-M04",
+      "linha_id": "L1",
+      "tipo": "retifica",
+      "fabricante": "Mazak",
+      "ano_fabricacao": 2019,
+      "posicao_na_linha": 4,
+      "alimenta": [
+        "L1-M05"
+      ]
+    },
+    {
+      "id": "L1-M05",
+      "linha_id": "L1",
+      "tipo": "lavadora_industrial",
+      "fabricante": "Siemens",
+      "ano_fabricacao": 2023,
+      "posicao_na_linha": 5,
+      "alimenta": [
+        "L2-M01"
+      ]
+    },
+    {
+      "id": "L2-M01",
+      "linha_id": "L2",
+      "tipo": "esteira_alimentadora",
+      "fabricante": "Siemens",
+      "ano_fabricacao": 2014,
+      "posicao_na_linha": 1,
+      "alimenta": [
+        "L2-M02"
+      ]
+    },
+    {
+      "id": "L2-M02",
+      "linha_id": "L2",
+      "tipo": "prensa_hidraulica",
+      "fabricante": "Bosch Rexroth",
+      "ano_fabricacao": 2019,
+      "posicao_na_linha": 2,
+      "alimenta": [
+        "L2-M03"
+      ]
+    },
+    {
+      "id": "L2-M03",
+      "linha_id": "L2",
+      "tipo": "robo_solda",
+      "fabricante": "ABB",
+      "ano_fabricacao": 2024,
+      "posicao_na_linha": 3,
+      "alimenta": [
+        "L2-M04"
+      ]
+    },
+    {
+      "id": "L2-M04",
+      "linha_id": "L2",
+      "tipo": "cabine_pintura",
+      "fabricante": "Siemens",
+      "ano_fabricacao": 2021,
+      "posicao_na_linha": 4,
+      "alimenta": [
+        "L2-M05"
+      ]
+    },
+    {
+      "id": "L2-M05",
+      "linha_id": "L2",
+      "tipo": "estacao_inspecao",
+      "fabricante": "WEG",
+      "ano_fabricacao": 2012,
+      "posicao_na_linha": 5,
+      "alimenta": []
+    }
+  ],
+  "sensores": [
+    {
+      "id": "S-L1-M01-TEMP",
+      "maquina_id": "L1-M01",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 55.01,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M01-VIBR",
+      "maquina_id": "L1-M01",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.5,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M01-PRES",
+      "maquina_id": "L1-M01",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 6.22,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M01-UMID",
+      "maquina_id": "L1-M01",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 43.21,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M01-CORR",
+      "maquina_id": "L1-M01",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.5,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M02-TEMP",
+      "maquina_id": "L1-M02",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 55.31,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M02-VIBR",
+      "maquina_id": "L1-M02",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.57,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M02-PRES",
+      "maquina_id": "L1-M02",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 6.03,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M02-UMID",
+      "maquina_id": "L1-M02",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 46.04,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M02-CORR",
+      "maquina_id": "L1-M02",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 18.48,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M03-TEMP",
+      "maquina_id": "L1-M03",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 53.57,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M03-VIBR",
+      "maquina_id": "L1-M03",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.53,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M03-PRES",
+      "maquina_id": "L1-M03",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 5.77,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M03-UMID",
+      "maquina_id": "L1-M03",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 46.43,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M03-CORR",
+      "maquina_id": "L1-M03",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.91,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M04-TEMP",
+      "maquina_id": "L1-M04",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 55.99,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M04-VIBR",
+      "maquina_id": "L1-M04",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.43,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M04-PRES",
+      "maquina_id": "L1-M04",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 5.85,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M04-UMID",
+      "maquina_id": "L1-M04",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 47.16,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M04-CORR",
+      "maquina_id": "L1-M04",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 18.77,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M05-TEMP",
+      "maquina_id": "L1-M05",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 55.07,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M05-VIBR",
+      "maquina_id": "L1-M05",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.39,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M05-PRES",
+      "maquina_id": "L1-M05",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 5.9,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M05-UMID",
+      "maquina_id": "L1-M05",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 45.26,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L1-M05-CORR",
+      "maquina_id": "L1-M05",
+      "linha_id": "L1",
+      "setor": "A",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.63,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M01-TEMP",
+      "maquina_id": "L2-M01",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 57.07,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M01-VIBR",
+      "maquina_id": "L2-M01",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.55,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M01-PRES",
+      "maquina_id": "L2-M01",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 6.05,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M01-UMID",
+      "maquina_id": "L2-M01",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 42.86,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M01-CORR",
+      "maquina_id": "L2-M01",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 18.38,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M02-TEMP",
+      "maquina_id": "L2-M02",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 54.57,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M02-VIBR",
+      "maquina_id": "L2-M02",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.47,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M02-PRES",
+      "maquina_id": "L2-M02",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 6.05,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M02-UMID",
+      "maquina_id": "L2-M02",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 44.99,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M02-CORR",
+      "maquina_id": "L2-M02",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.31,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M03-TEMP",
+      "maquina_id": "L2-M03",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 56.38,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M03-VIBR",
+      "maquina_id": "L2-M03",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.53,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M03-PRES",
+      "maquina_id": "L2-M03",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 5.99,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M03-UMID",
+      "maquina_id": "L2-M03",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 46.88,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M03-CORR",
+      "maquina_id": "L2-M03",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.57,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M04-TEMP",
+      "maquina_id": "L2-M04",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 57.34,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M04-VIBR",
+      "maquina_id": "L2-M04",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.49,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M04-PRES",
+      "maquina_id": "L2-M04",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 6.01,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M04-UMID",
+      "maquina_id": "L2-M04",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 42.86,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M04-CORR",
+      "maquina_id": "L2-M04",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.5,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M05-TEMP",
+      "maquina_id": "L2-M05",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "temperatura",
+      "unidade": "C",
+      "media": 57.54,
+      "desvio": 4.0,
+      "limites": {
+        "warning": 75.0,
+        "error": 85.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M05-VIBR",
+      "maquina_id": "L2-M05",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "vibracao",
+      "unidade": "mm/s",
+      "media": 2.51,
+      "desvio": 0.5,
+      "limites": {
+        "warning": 7.0,
+        "error": 11.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M05-PRES",
+      "maquina_id": "L2-M05",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "pressao",
+      "unidade": "bar",
+      "media": 6.1,
+      "desvio": 0.25,
+      "limites": {
+        "warning": 7.2,
+        "error": 7.8
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M05-UMID",
+      "maquina_id": "L2-M05",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "umidade",
+      "unidade": "%",
+      "media": 45.98,
+      "desvio": 3.0,
+      "limites": {
+        "warning": 65.0,
+        "error": 75.0
+      },
+      "intervalo_s": 1
+    },
+    {
+      "id": "S-L2-M05-CORR",
+      "maquina_id": "L2-M05",
+      "linha_id": "L2",
+      "setor": "B",
+      "tipo": "corrente",
+      "unidade": "A",
+      "media": 17.87,
+      "desvio": 1.5,
+      "limites": {
+        "warning": 26.0,
+        "error": 30.0
+      },
+      "intervalo_s": 1
+    }
+  ],
+  "pecas": [
+    {
+      "id": "P-001",
+      "nome": "Rolamento 6205",
+      "tipo": "rolamento",
+      "fornecedor": "Fornecedor A",
+      "maquinas": [
+        "L1-M04",
+        "L2-M03"
+      ]
+    },
+    {
+      "id": "P-002",
+      "nome": "Correia dentada HTD",
+      "tipo": "correia",
+      "fornecedor": "Fornecedor B",
+      "maquinas": [
+        "L1-M05",
+        "L2-M03",
+        "L2-M04",
+        "L2-M05"
+      ]
+    },
+    {
+      "id": "P-003",
+      "nome": "Motor de indução 5 cv",
+      "tipo": "motor",
+      "fornecedor": "Fornecedor B",
+      "maquinas": [
+        "L1-M05",
+        "L2-M02",
+        "L2-M03",
+        "L2-M04"
+      ]
+    },
+    {
+      "id": "P-004",
+      "nome": "Válvula solenoide 1/2",
+      "tipo": "valvula",
+      "fornecedor": "Fornecedor A",
+      "maquinas": [
+        "L1-M04",
+        "L1-M05",
+        "L2-M04"
+      ]
+    },
+    {
+      "id": "P-005",
+      "nome": "Inversor de frequência",
+      "tipo": "eletronica",
+      "fornecedor": "Fornecedor C",
+      "maquinas": [
+        "L1-M03",
+        "L2-M03"
+      ]
+    },
+    {
+      "id": "P-006",
+      "nome": "Bomba hidráulica de engrenagem",
+      "tipo": "bomba",
+      "fornecedor": "Fornecedor C",
+      "maquinas": [
+        "L1-M04",
+        "L1-M05",
+        "L2-M01"
+      ]
+    }
+  ]
+}
